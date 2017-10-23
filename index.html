@@ -69,6 +69,85 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-opt-git" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/23/opt-git/" class="article-date">
+  <time datetime="2017-10-23T11:54:10.000Z" itemprop="datePublished">2017-10-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/运维/">运维</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/23/opt-git/">opt-git</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="git常见问题"><a href="#git常见问题" class="headerlink" title="git常见问题"></a>git常见问题</h1><h2 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h2><p>初始密码 <code>{username}@2017</code><br>一般的开发流程如下，<code>git clone</code>代码后，在自己的本地分支上开发，避免主分支开发上的混乱</p>
+<ol>
+<li><p>新建本地分支<br><code>git checkout -b dev</code></p>
+</li>
+<li><p>推送本地分支到远程<br><code>git push origin origin/dev</code></p>
+</li>
+<li><p>切换当前分支到master<br><code>git checkout master</code></p>
+</li>
+<li><p>将dev分支合并到master<br><code>git merge dev</code></p>
+</li>
+</ol>
+<h2 id="冲突"><a href="#冲突" class="headerlink" title="冲突"></a>冲突</h2><p>同步代码前应尽量避免冲突</p>
+<ol>
+<li><p>备份当前工作区(前提是,没有git commit,可以git add)<br><code>git stash</code><br>或者 加入注释以便以后好找回未提交的代码<br><code>git stash save &#39;正在做冒泡功能,保存一下2016-06-30....&#39;</code></p>
+</li>
+<li><p>更新代码<br><code>git pull</code></p>
+</li>
+<li><p>还原工作区<br><code>git stash pop</code></p>
+</li>
+</ol>
+<h2 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">术语：</div><div class="line">工作区 是你的本地开发环境</div><div class="line">缓存区 是你add的本地仓库</div><div class="line">引用 是你commit的本地分支（如master）</div></pre></td></tr></table></figure>
+<ol>
+<li><p>改提交说明：<br><code>$ git reset --soft HEAD^</code><br>工作区和暂存区不改变，但是引用向前回退一次。当对最新的提交说明或者提交的更改不满意时，撤销最新的提交以便重新提交。</p>
+</li>
+<li><p>改提交文件内容：<br><code>$ git reset --mixed HEAD^</code><br>工作区不改变，但是暂存区会回退到上一次提交之前，引用也会回退一次。</p>
+</li>
+<li><p>慎用！！！工作区所有未commit改动永久丢失！！！<br><code>$ git reset --hard HEAD^</code><br>彻底撤销最近的提交。引用回退到前一次，而且工作区和暂存区都会回退到上一次提交的状态。自上一次以来的提交全部丢失。</p>
+</li>
+<li><p>慎用！！！工作区相应的文件未commit改动永久丢失。<br><code>$ git checkout -- filename</code><br>用暂存区中filename文件来覆盖工作区中的filename文件。相当于取消自上次执行git add filename以来（如果执行过）的本地修改。</p>
+</li>
+<li><p>慎用！！！工作区相应的文件未push改动永久丢失。<br><code>$ git checkout branch -- filename</code><br>维持HEAD的指向不变。用branch所指向的提交中filename替换暂存区和工作区中相应的文件。注意会将暂存区和工作区中的filename文件直接覆盖。</p>
+</li>
+<li><p>查看操作记录<br><code>git relog</code></p>
+</li>
+<li><p>查看提交记录<br><code>git log</code></p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://cejasonwoo.github.io/2017/10/23/opt-git/" data-id="cj944lohh0004kz3vb4cn18pv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/">Mac</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-opt-gitbook" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/10/23/opt-gitbook/" class="article-date">
@@ -99,10 +178,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cejasonwoo.github.io/2017/10/23/opt-gitbook/" data-id="cj944fzh80007i63v191yhwja" class="article-share-link">Share</a>
+      <a data-url="https://cejasonwoo.github.io/2017/10/23/opt-gitbook/" data-id="cj944lohs0008kz3vosg4flnu" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/">Mac</a></li></ul>
 
     </footer>
   </div>
@@ -137,8 +216,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#<br>JS</p>
-<blockquote>
+        <h1 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h1><blockquote>
 <p>术语<br>Immutable 不可改变的，返回新对象<br>Mutable 修改原对象</p>
 </blockquote>
 <h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="取字符串右边4位"><a href="#取字符串右边4位" class="headerlink" title="取字符串右边4位"></a>取字符串右边4位</h3><ul>
@@ -173,7 +251,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cejasonwoo.github.io/2017/10/23/js-mark/" data-id="cj944fzgt0004i63va0c7c1v9" class="article-share-link">Share</a>
+      <a data-url="https://cejasonwoo.github.io/2017/10/23/js-mark/" data-id="cj944lohn0007kz3v412s5rq0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
@@ -235,7 +313,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cejasonwoo.github.io/2017/10/23/java-8/" data-id="cj944fzgn0002i63vz94k8g49" class="article-share-link">Share</a>
+      <a data-url="https://cejasonwoo.github.io/2017/10/23/java-8/" data-id="cj944lohd0002kz3vunr0y23r" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
@@ -284,7 +362,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cejasonwoo.github.io/2017/10/22/test/" data-id="cj944fzhd0008i63vjtksyqjo" class="article-share-link">Share</a>
+      <a data-url="https://cejasonwoo.github.io/2017/10/22/test/" data-id="cj944loht0009kz3vy0k3qrw5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/">Mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag1/">tag1</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag2/">tag2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
@@ -331,7 +409,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cejasonwoo.github.io/2017/10/22/hello-world/" data-id="cj944fzge0000i63vpalcqprp" class="article-share-link">Share</a>
+      <a data-url="https://cejasonwoo.github.io/2017/10/22/hello-world/" data-id="cj944loh60000kz3vvjtj5p15" class="article-share-link">Share</a>
       
       
     </footer>
@@ -370,7 +448,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/tag1/" style="font-size: 10px;">tag1</a> <a href="/tags/tag2/" style="font-size: 10px;">tag2</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a>
+      <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 15px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/Mac/" style="font-size: 20px;">Mac</a> <a href="/tags/tag1/" style="font-size: 10px;">tag1</a> <a href="/tags/tag2/" style="font-size: 10px;">tag2</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a>
     </div>
   </div>
 
@@ -392,6 +470,10 @@
       <ul>
         
           <li>
+            <a href="/2017/10/23/opt-git/">opt-git</a>
+          </li>
+        
+          <li>
             <a href="/2017/10/23/opt-gitbook/">opt-gitbook</a>
           </li>
         
@@ -405,10 +487,6 @@
         
           <li>
             <a href="/2017/10/22/test/">Test</a>
-          </li>
-        
-          <li>
-            <a href="/2017/10/22/hello-world/">Hello World</a>
           </li>
         
       </ul>
