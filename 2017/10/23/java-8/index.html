@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Jason闪</title>
+  <title>java-8 | Jason闪</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jason闪">
-<meta property="og:url" content="https://cejasonwoo.github.io/index.html">
+  <meta name="description" content="#Stream  基于java8的流写业务逻辑，可以用精简的代码实现复杂的业务逻辑。取代以前复杂的多重for循环代码。  :: 关键字为了使得代码更为直观123num -&amp;gt; Integer::valueOf;等价于Integer.valueOf(num) 过滤首先使用for循环方案。123456789public List&amp;lt;Item&amp;gt; getItems() &amp;#123;List&amp;">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java-8">
+<meta property="og:url" content="https://cejasonwoo.github.io/2017/10/23/java-8/index.html">
 <meta property="og:site_name" content="Jason闪">
-<meta property="og:description" content="Welcome">
+<meta property="og:description" content="#Stream  基于java8的流写业务逻辑，可以用精简的代码实现复杂的业务逻辑。取代以前复杂的多重for循环代码。  :: 关键字为了使得代码更为直观123num -&amp;gt; Integer::valueOf;等价于Integer.valueOf(num) 过滤首先使用for循环方案。123456789public List&amp;lt;Item&amp;gt; getItems() &amp;#123;List&amp;">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-10-23T11:51:01.698Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jason闪">
-<meta name="twitter:description" content="Welcome">
+<meta name="twitter:title" content="java-8">
+<meta name="twitter:description" content="#Stream  基于java8的流写业务逻辑，可以用精简的代码实现复杂的业务逻辑。取代以前复杂的多重for循环代码。  :: 关键字为了使得代码更为直观123num -&amp;gt; Integer::valueOf;等价于Integer.valueOf(num) 过滤首先使用for循环方案。123456789public List&amp;lt;Item&amp;gt; getItems() &amp;#123;List&amp;">
   
     <link rel="alternate" href="/atom.xml" title="Jason闪" type="application/atom+xml">
   
@@ -67,125 +69,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-opt-gitbook" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/10/23/opt-gitbook/" class="article-date">
-  <time datetime="2017-10-23T11:46:35.000Z" itemprop="datePublished">2017-10-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/运维/">运维</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/23/opt-gitbook/">opt-gitbook</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://cejasonwoo.github.io/2017/10/23/opt-gitbook/" data-id="cj944fzh80007i63v191yhwja" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-js-mark" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/10/23/js-mark/" class="article-date">
-  <time datetime="2017-10-23T11:45:17.000Z" itemprop="datePublished">2017-10-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/前端/">前端</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/23/js-mark/">js-mark</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#<br>JS</p>
-<blockquote>
-<p>术语<br>Immutable 不可改变的，返回新对象<br>Mutable 修改原对象</p>
-</blockquote>
-<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="取字符串右边4位"><a href="#取字符串右边4位" class="headerlink" title="取字符串右边4位"></a>取字符串右边4位</h3><ul>
-<li>[Immutable]</li>
-</ul>
-<p><code>&#39;123456&#39;.slice(-4) // =&gt; 3456</code></p>
-<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="合并操作"><a href="#合并操作" class="headerlink" title="合并操作"></a>合并操作</h3><ul>
-<li>[Immutable]</li>
-</ul>
-<p>返回newArray<br>组合两个或两个以上的数组<br><code>array1.concat([item1[, item2[, . . . [, itemN]]]])</code></p>
-<ul>
-<li>[Mutable]</li>
-</ul>
-<p>push技巧<br>将新数组追加到一个数组<br><code>Array.prototype.push.apply(arrayObj, [item1])</code></p>
-<h3 id="移除操作"><a href="#移除操作" class="headerlink" title="移除操作"></a>移除操作</h3><ul>
-<li>[Immutable]</li>
-</ul>
-<p>返回newArray<br>返回一个数组中的一部分。<br><code>arrayObj.slice(start, [end])</code></p>
-<ul>
-<li>[Mutable]</li>
-</ul>
-<p>从一个数组中移除元素<br><code>arrayObj.splice(start, deleteCount, [item1[, item2[, . . . [,itemN]]]])</code></p>
-<p>从数组中移除最后一个元素并返回该元素。<br><code>arrayObj.pop( )</code></p>
-<p>从数组中移除第一个元素并将返回该元素<br><code>arrayObj.shift( )</code></p>
-<h3 id="插入操作"><a href="#插入操作" class="headerlink" title="插入操作"></a>插入操作</h3><ul>
-<li>[Mutable]</li>
-</ul>
-<p>将新元素追加到一个数组<br><code>arrayObj.push([item1 [item2 [. . . [itemN ]]]])</code><br>用法：<br><code>my_array.push (5, 6, 7);</code></p>
-<p>在数组的开头插入新元素。<br><code>arrayObj.unshift([item1[, item2 [, . . . [, itemN]]]])</code></p>
-<h3 id="找出数组中最大元素"><a href="#找出数组中最大元素" class="headerlink" title="找出数组中最大元素"></a>找出数组中最大元素</h3><p><code>Math.max.apply(this, targetArray)</code></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://cejasonwoo.github.io/2017/10/23/js-mark/" data-id="cj944fzgt0004i63va0c7c1v9" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-java-8" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-java-8" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/10/23/java-8/" class="article-date">
   <time datetime="2017-10-23T11:44:43.000Z" itemprop="datePublished">2017-10-23</time>
@@ -202,8 +86,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/23/java-8/">java-8</a>
+    <h1 class="article-title" itemprop="name">
+      java-8
     </h1>
   
 
@@ -243,104 +127,28 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/10/22/test/" class="article-date">
-  <time datetime="2017-10-22T15:01:21.000Z" itemprop="datePublished">2017-10-22</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Funny/">Funny</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2017/10/23/js-mark/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/22/test/">Test</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">Welcome to my blog.</div></pre></td></tr></table></figure>
-<h2 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h2><blockquote>
-<p>welcome!</p>
-</blockquote>
-<h2 id="中文"><a href="#中文" class="headerlink" title="中文"></a>中文</h2><ul>
-<li>中文测试</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://cejasonwoo.github.io/2017/10/22/test/" data-id="cj944fzhd0008i63vjtksyqjo" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/">Mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag1/">tag1</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag2/">tag2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/10/22/hello-world/" class="article-date">
-  <time datetime="2017-10-22T14:20:36.319Z" itemprop="datePublished">2017-10-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+          js-mark
         
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/22/hello-world/">Hello World</a>
-    </h1>
   
+    <a href="/2017/10/22/test/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Test</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://cejasonwoo.github.io/2017/10/22/hello-world/" data-id="cj944fzge0000i63vpalcqprp" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
 
 </section>
         
