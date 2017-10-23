@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>opt-gitbook | Jason闪</title>
+  <title>gitbook | Jason闪</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome">
+  <meta name="description" content="from 在自己的服务器上安装GitBook http://blog.csdn.net/ys743276112/article/details/45130831from 官方文档 https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md Local Installation$ npm install gitbook-cli -g$">
 <meta name="keywords" content="Mac,Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="opt-gitbook">
+<meta property="og:title" content="gitbook">
 <meta property="og:url" content="https://cejasonwoo.github.io/2017/10/23/opt-gitbook/index.html">
 <meta property="og:site_name" content="Jason闪">
-<meta property="og:description" content="Welcome">
+<meta property="og:description" content="from 在自己的服务器上安装GitBook http://blog.csdn.net/ys743276112/article/details/45130831from 官方文档 https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md Local Installation$ npm install gitbook-cli -g$">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-23T11:54:39.746Z">
+<meta property="og:updated_time" content="2017-10-23T12:02:38.348Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="opt-gitbook">
-<meta name="twitter:description" content="Welcome">
+<meta name="twitter:title" content="gitbook">
+<meta name="twitter:description" content="from 在自己的服务器上安装GitBook http://blog.csdn.net/ys743276112/article/details/45130831from 官方文档 https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md Local Installation$ npm install gitbook-cli -g$">
   
     <link rel="alternate" href="/atom.xml" title="Jason闪" type="application/atom+xml">
   
@@ -87,7 +87,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      opt-gitbook
+      gitbook
     </h1>
   
 
@@ -95,11 +95,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>from 在自己的服务器上安装GitBook <a href="http://blog.csdn.net/ys743276112/article/details/45130831" target="_blank" rel="external">http://blog.csdn.net/ys743276112/article/details/45130831</a><br>from 官方文档 <a href="https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md" target="_blank" rel="external">https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md</a></p>
+<h2 id="Local-Installation"><a href="#Local-Installation" class="headerlink" title="Local Installation"></a>Local Installation</h2><p>$ npm install gitbook-cli -g<br>$ gitbook init</p>
+<h2 id="编译md为html"><a href="#编译md为html" class="headerlink" title="编译md为html"></a>编译md为html</h2><p>$ gitbook build</p>
+<h2 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h2><p>$ gitbook serve &amp;</p>
+<h2 id="同时部署多个gitbook"><a href="#同时部署多个gitbook" class="headerlink" title="同时部署多个gitbook"></a>同时部署多个gitbook</h2><p>如果要启动另一部电子书服务的话， 就需要同时修改web端口和监控进程端口， 类似这样:<br>gitbook serve –lrport 35288 –port 4001 /path2/your_another_doc_dir/</p>
+<h2 id="编辑"><a href="#编辑" class="headerlink" title="编辑"></a>编辑</h2><p>1.先下载文档 git clone <a href="https://git.coding.net/Muscle/locals-document.git" target="_blank" rel="external">https://git.coding.net/Muscle/locals-document.git</a><br>2.用gitbookEidtor引入<br>3.在gitbookEidtor选择你要编辑的分支，修改后记得save和push</p>
+<h2 id="插件使用"><a href="#插件使用" class="headerlink" title="插件使用"></a>插件使用</h2><p>from <a href="http://gitbook.zhangjikai.com/plugins.html" target="_blank" rel="external">http://gitbook.zhangjikai.com/plugins.html</a><br>要安装<br>gitbook install</p>
+<h2 id="Jenkins自动集成"><a href="#Jenkins自动集成" class="headerlink" title="Jenkins自动集成"></a>Jenkins自动集成</h2><p>from <a href="http://www.linuxidc.com/Linux/2016-05/131136.htm" target="_blank" rel="external">http://www.linuxidc.com/Linux/2016-05/131136.htm</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">登陆jenkins 　http://192.168.1.2:8082</div><div class="line">左上角新建 　 填入名称　比如叫做　 GitBook_测试</div><div class="line">选择　构建一个自由风格的软件项目　</div><div class="line">点击OK 进入详细设置</div><div class="line">源码管理　选择git</div><div class="line">Repository URL 填入　项目url 比如　</div><div class="line">http://192.168.1.2:8081/zhuangqiubin/Books_ceshi.git</div><div class="line">Credentials　处点击ADD 　填入你的gitlab用户名和密码　</div><div class="line">确定添加后　把none换成你刚刚添加的用户名密码</div><div class="line">最后　Add Repository 确定</div></pre></td></tr></table></figure></p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cejasonwoo.github.io/2017/10/23/opt-gitbook/" data-id="cj944n4yt0008mv3vsb5i4xhj" class="article-share-link">Share</a>
+      <a data-url="https://cejasonwoo.github.io/2017/10/23/opt-gitbook/" data-id="cj944uj340007pm3vnockusr3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/">Mac</a></li></ul>
@@ -122,7 +130,7 @@
   
     <a href="/2017/10/23/js-mark/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">js-mark</div>
+      <div class="article-nav-title">js代码记录本</div>
     </a>
   
 </nav>
@@ -184,15 +192,15 @@
           </li>
         
           <li>
-            <a href="/2017/10/23/opt-gitbook/">opt-gitbook</a>
+            <a href="/2017/10/23/opt-gitbook/">gitbook</a>
           </li>
         
           <li>
-            <a href="/2017/10/23/js-mark/">js-mark</a>
+            <a href="/2017/10/23/js-mark/">js代码记录本</a>
           </li>
         
           <li>
-            <a href="/2017/10/23/java-8/">java-8</a>
+            <a href="/2017/10/23/java-8/">Java8 Stream 常用代码</a>
           </li>
         
           <li>
