@@ -3,20 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Git常见问题 | Jason闪</title>
+  <title>bit | Jason闪</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="git常见问题开发一般的开发流程如下，git clone代码后，在自己的本地分支上开发，避免主分支开发上的混乱  新建本地分支git checkout -b dev  推送本地分支到远程git push origin origin/dev  切换当前分支到mastergit checkout master  将dev分支合并到mastergit merge dev   冲突同步代码前应尽量避免冲突">
-<meta name="keywords" content="Mac">
+  <meta name="description" content="Welcome">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git常见问题">
-<meta property="og:url" content="https://cejasonwoo.github.io/2017/10/23/opt-git/index.html">
+<meta property="og:title" content="bit">
+<meta property="og:url" content="https://cejasonwoo.github.io/2019/01/14/bit/index.html">
 <meta property="og:site_name" content="Jason闪">
-<meta property="og:description" content="git常见问题开发一般的开发流程如下，git clone代码后，在自己的本地分支上开发，避免主分支开发上的混乱  新建本地分支git checkout -b dev  推送本地分支到远程git push origin origin/dev  切换当前分支到mastergit checkout master  将dev分支合并到mastergit merge dev   冲突同步代码前应尽量避免冲突">
+<meta property="og:description" content="Welcome">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-23T12:03:49.942Z">
+<meta property="og:updated_time" content="2019-01-14T15:53:05.919Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git常见问题">
-<meta name="twitter:description" content="git常见问题开发一般的开发流程如下，git clone代码后，在自己的本地分支上开发，避免主分支开发上的混乱  新建本地分支git checkout -b dev  推送本地分支到远程git push origin origin/dev  切换当前分支到mastergit checkout master  将dev分支合并到mastergit merge dev   冲突同步代码前应尽量避免冲突">
+<meta name="twitter:title" content="bit">
+<meta name="twitter:description" content="Welcome">
   
     <link rel="alternate" href="/atom.xml" title="Jason闪" type="application/atom+xml">
   
@@ -69,16 +68,12 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-opt-git" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-bit" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/10/23/opt-git/" class="article-date">
-  <time datetime="2017-10-23T11:54:10.000Z" itemprop="datePublished">2017-10-23</time>
+    <a href="/2019/01/14/bit/" class="article-date">
+  <time datetime="2019-01-14T15:53:05.000Z" itemprop="datePublished">2019-01-14</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/运维/">运维<span class="article-category-count">2</span></a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -87,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Git常见问题
+      bit
     </h1>
   
 
@@ -95,71 +90,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="git常见问题"><a href="#git常见问题" class="headerlink" title="git常见问题"></a>git常见问题</h1><h2 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h2><p>一般的开发流程如下，<code>git clone</code>代码后，在自己的本地分支上开发，避免主分支开发上的混乱</p>
-<ol>
-<li><p>新建本地分支<br><code>git checkout -b dev</code></p>
-</li>
-<li><p>推送本地分支到远程<br><code>git push origin origin/dev</code></p>
-</li>
-<li><p>切换当前分支到master<br><code>git checkout master</code></p>
-</li>
-<li><p>将dev分支合并到master<br><code>git merge dev</code></p>
-</li>
-</ol>
-<h2 id="冲突"><a href="#冲突" class="headerlink" title="冲突"></a>冲突</h2><p>同步代码前应尽量避免冲突</p>
-<ol>
-<li><p>备份当前工作区(前提是,没有git commit,可以git add)<br><code>git stash</code><br>或者 加入注释以便以后好找回未提交的代码<br><code>git stash save &#39;正在做冒泡功能,保存一下2016-06-30....&#39;</code></p>
-</li>
-<li><p>更新代码<br><code>git pull</code></p>
-</li>
-<li><p>还原工作区<br><code>git stash pop</code></p>
-</li>
-</ol>
-<h2 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">术语：</div><div class="line">工作区 是你的本地开发环境</div><div class="line">缓存区 是你add的本地仓库</div><div class="line">引用 是你commit的本地分支（如master）</div></pre></td></tr></table></figure>
-<ol>
-<li><p>改提交说明：<br><code>$ git reset --soft HEAD^</code><br>工作区和暂存区不改变，但是引用向前回退一次。当对最新的提交说明或者提交的更改不满意时，撤销最新的提交以便重新提交。</p>
-</li>
-<li><p>改提交文件内容：<br><code>$ git reset --mixed HEAD^</code><br>工作区不改变，但是暂存区会回退到上一次提交之前，引用也会回退一次。</p>
-</li>
-<li><p>慎用！！！工作区所有未commit改动永久丢失！！！<br><code>$ git reset --hard HEAD^</code><br>彻底撤销最近的提交。引用回退到前一次，而且工作区和暂存区都会回退到上一次提交的状态。自上一次以来的提交全部丢失。</p>
-</li>
-<li><p>慎用！！！工作区相应的文件未commit改动永久丢失。<br><code>$ git checkout -- filename</code><br>用暂存区中filename文件来覆盖工作区中的filename文件。相当于取消自上次执行git add filename以来（如果执行过）的本地修改。</p>
-</li>
-<li><p>慎用！！！工作区相应的文件未push改动永久丢失。<br><code>$ git checkout branch -- filename</code><br>维持HEAD的指向不变。用branch所指向的提交中filename替换暂存区和工作区中相应的文件。注意会将暂存区和工作区中的filename文件直接覆盖。</p>
-</li>
-<li><p>查看操作记录<br><code>git relog</code></p>
-</li>
-<li><p>查看提交记录<br><code>git log</code></p>
-</li>
-</ol>
-
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cejasonwoo.github.io/2017/10/23/opt-git/" data-id="cjqwk4tkb0008c43vgyn54ywg" class="article-share-link">Share</a>
+      <a data-url="https://cejasonwoo.github.io/2019/01/14/bit/" data-id="cjqwk4tjq0000c43vhdm1ffi9" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/">Mac</a></li></ul>
-
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2019/01/14/bit/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          bit
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/10/23/opt-gitbook/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/10/23/opt-git/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">gitbook</div>
+      <div class="article-nav-title">Git常见问题</div>
     </a>
   
 </nav>
