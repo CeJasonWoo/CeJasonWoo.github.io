@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="Jason闪">
 <meta property="og:description" content="123术语:Immutable 不可改变的，返回新对象Mutable 修改原对象 字符串取字符串右边4位 [Immutable]  &amp;#39;123456&amp;#39;.slice(-4) // =&amp;gt; 3456 数组合并操作 [Immutable]  返回newArray组合两个或两个以上的数组array1.concat([item1[, item2[, . . . [, itemN]]]])">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-23T11:59:36.363Z">
+<meta property="og:updated_time" content="2019-12-22T07:44:41.308Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js代码记录本">
 <meta name="twitter:description" content="123术语:Immutable 不可改变的，返回新对象Mutable 修改原对象 字符串取字符串右边4位 [Immutable]  &amp;#39;123456&amp;#39;.slice(-4) // =&amp;gt; 3456 数组合并操作 [Immutable]  返回newArray组合两个或两个以上的数组array1.concat([item1[, item2[, . . . [, itemN]]]])">
@@ -218,7 +218,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">6</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">6</span></li></ul>
     </div>
   </div>
 
@@ -230,6 +230,21 @@
     <div class="widget-body">
       <ul class="recent-post-list list-unstyled no-thumbnail">
         
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2019/12/22/2019-12-22/" class="title">(no title)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-12-22T07:07:01.082Z" itemprop="datePublished">2019-12-22</time>
+              </p>
+            </div>
+          </li>
+          
           <li>
             
             <div class="item-inner">
@@ -290,21 +305,6 @@
             </div>
           </li>
           
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                <a class="category-link" href="/categories/前端/">前端</a>
-              </p>
-              <p class="item-title">
-                <a href="/2017/10/23/js-mark/" class="title">js代码记录本</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2017-10-23T11:45:17.000Z" itemprop="datePublished">2017-10-23</time>
-              </p>
-            </div>
-          </li>
-          
       </ul>
     </div>
   </div>
@@ -316,6 +316,15 @@
 
   
   
+<aside class="sidebar collapse in" id="collapseToc" itemscope="" itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串"><span class="toc-number">1.</span> <span class="toc-text">字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#取字符串右边4位"><span class="toc-number">1.1.</span> <span class="toc-text">取字符串右边4位</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数组"><span class="toc-number">2.</span> <span class="toc-text">数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#合并操作"><span class="toc-number">2.1.</span> <span class="toc-text">合并操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#移除操作"><span class="toc-number">2.2.</span> <span class="toc-text">移除操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插入操作"><span class="toc-number">2.3.</span> <span class="toc-text">插入操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#找出数组中最大元素"><span class="toc-number">2.4.</span> <span class="toc-text">找出数组中最大元素</span></a></li></ol></li></ol>
+    </nav>
+  </div>
+</aside>
+
 <main class="main" role="main">
   <div class="content">
   <article id="post-js-mark" class="article article-type-post" itemscope="" itemtype="http://schema.org/BlogPosting">
@@ -430,7 +439,7 @@
       </div>
       <div class="media-body">
         <h3 class="media-heading"><a href="https://github.com/CeJasonWoo" target="_blank"><span class="text-dark">Jason闪</span><small class="ml-1x">Java Developer</small></a></h3>
-        <div>码农。</div>
+        <div>何以解忧，唯有学习。</div>
       </div>
     </figure>
   </div>
@@ -465,6 +474,15 @@
       <a href="/2017/10/23/java-8/" title="Java8 Stream 常用代码"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn" data-toggle="collapse" href="#collapseToc" aria-expanded="true" title="文章目录" role="button">
+        <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
     
   </ul>
   
